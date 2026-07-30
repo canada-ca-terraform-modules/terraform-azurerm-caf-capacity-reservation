@@ -156,6 +156,25 @@ run "rg_provided_as_id" {
   }
 }
 
+run "rg_provided_as_id_case_insensitive" {
+  command = plan
+  variables {
+    capacity_reservation_group = {
+      resource_group = "/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/rg-test"
+      reservations = {
+        sql1 = {
+          sku = { name = "Standard_D2s_v3", capacity = 1 }
+        }
+      }
+    }
+  }
+
+  assert {
+    condition     = azurerm_capacity_reservation_group.crg.resource_group_name == "rg-test"
+    error_message = "resource_group_name must be parsed correctly from a full resource group ID regardless of case"
+  }
+}
+
 run "no_reservations" {
   command = plan
   variables {

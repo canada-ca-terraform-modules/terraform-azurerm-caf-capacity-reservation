@@ -24,5 +24,4 @@ variable "location" {
 variable "capacity_reservation_group" {
   description = "(Required) Capacity reservation group object. See README for the full schema, including the nested `reservations` map."
   type        = any
-  default     = {}
 }

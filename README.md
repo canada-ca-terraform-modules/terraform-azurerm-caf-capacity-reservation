@@ -88,7 +88,7 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| <a name="input_capacity_reservation_group"></a> [capacity\_reservation\_group](#input\_capacity\_reservation\_group) | (Required) Capacity reservation group object. See README for the full schema, including the nested `reservations` map. | `any` | `{}` | no |
+| <a name="input_capacity_reservation_group"></a> [capacity\_reservation\_group](#input\_capacity\_reservation\_group) | (Required) Capacity reservation group object. See README for the full schema, including the nested `reservations` map. | `any` | n/a | yes |
 | <a name="input_location"></a> [location](#input\_location) | Azure location where the capacity reservation group will be located | `any` | `"canadacentral"` | no |
 | <a name="input_name"></a> [name](#input\_name) | (Required) Name of the capacity reservation group. Used as the base name for the group and every reservation it contains. | `string` | n/a | yes |
 | <a name="input_resource_groups"></a> [resource\_groups](#input\_resource\_groups) | (Required) Map of resource group objects | `any` | `{}` | no |
